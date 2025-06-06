@@ -1,54 +1,160 @@
-# React + TypeScript + Vite
+# Vite Starter Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, production-ready starter template built with React, TypeScript, Vite, and TailwindCSS. This template includes routing, UI components, and development tools configured out of the box.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Vite** - Lightning fast build tool and dev server
+- ⚛️ **React 19** - Latest React with modern features
+- 🔷 **TypeScript** - Full TypeScript support with type checking
+- 🎨 **TailwindCSS v4** - Modern utility-first CSS framework
+- 🧭 **TanStack Router** - Type-safe routing with devtools
+- 🎯 **Shadcn UI** - Headless, accessible UI components
+- 🧹 **ESLint + Prettier** - Code linting and formatting
+- 🎭 **Lucide Icons** - Beautiful, customizable icons
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (version 18 or higher)
+- npm, yarn, pnpm or bun
+
+### Installation
+
+1. Clone this repository:
+
+```bash
+git clone <git@github.com:RahullRawat/vite-starter.git>
+cd vite-starter
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
 ```
+
+3. Start the development server:
+
+```bash
+bun run dev
+```
+
+4. Open your browser and visit `http://localhost:5173`
+
+## 📜 Available Scripts
+
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run preview` - Preview production build locally
+- `bun run lint` - Run ESLint
+- `bun run format` - Format code with Prettier
+
+## 🏗️ Project Structure
+
+```
+vite-starter/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── routes/         # Application routes
+│   ├── lib/           # Utility functions
+│   └── main.tsx       # Application entry point
+├── public/            # Static assets
+├── index.html         # HTML template
+├── vite.config.ts     # Vite configuration
+├── tailwind.config.ts # TailwindCSS configuration
+├── tsconfig.json      # TypeScript configuration
+└── eslint.config.js   # ESLint configuration
+```
+
+## 🛠️ Tech Stack
+
+### Core
+
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+
+### Styling
+
+- **TailwindCSS v4** - Utility-first CSS framework
+- **tailwind-merge** - Merge Tailwind classes efficiently
+- **class-variance-authority** - Component variant management
+
+### Routing
+
+- **TanStack Router** - Type-safe routing solution
+- **TanStack Router DevTools** - Development tools for routing
+
+### UI Components
+
+- **Shadcn UI** - Headless, accessible components
+- **Lucide React** - Beautiful SVG icons
+
+### Code Quality
+
+- **ESLint** - JavaScript/TypeScript linting
+- **Prettier** - Code formatting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+
+## 🎨 Styling
+
+This template uses TailwindCSS v4 with the new Vite plugin for optimal performance. The configuration includes:
+
+- Modern CSS features
+- Responsive design utilities
+- Dark mode support (if configured)
+- Custom animations with `tw-animate-css`
+
+## 🧭 Routing
+
+TanStack Router provides:
+
+- Type-safe routing
+- Code splitting
+- Search params validation
+- Layout routes
+- Development tools
+
+## 📦 Building for Production
+
+```bash
+bun run build
+```
+
+This will:
+
+1. Type-check your code with TypeScript
+2. Build optimized bundles with Vite
+3. Output files to the `dist` directory
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [React](https://react.dev/) - A JavaScript library for building user interfaces
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [TanStack Router](https://tanstack.com/router) - Type-safe routing
+- [Shadcn UI](https://ui.shadcn.com/) - Low-level UI primitives
+
+---
+
+Built with ❤️
